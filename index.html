@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="source/lol.css" />
+</head>
+
+<body>
+
+  <div class="one">
+    <div class="dropdown">
+      <img src="content\drop.png" onclick="myFunction()" class="dropbtn">
+      <div id="myDropdown" class="dropdown-content">
+        <a href="#home">Home</a>
+        <a href="#about">Students</a>
+        <a href="#contact">Teachers</a>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <img class="image" src="content\logo.png" />
+  <div class="page">
+  </div>
+
+
+  <script>
+    /* When the user clicks on the button,
+      toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    //Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
+  <div class="other">
+    <img src="content\slide.jpg">
+  </div>
+  <p class="what"> theCourse Experience App (CE App) </p>
+
+</body>
+
+</html>
